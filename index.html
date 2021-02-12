@@ -7,12 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Document</title>
+    <title>Venera</title>
 </head>
 
 <body>
-    <header>
+    <header class="wow animate__fadeInUp animate__animated" data-wow-duration="0.6s" data-wow-delay="0s">
         <div class="container">
             <div class="header_inner">
                 <div class="header_item">
@@ -26,8 +27,8 @@
                             <li><button class="btn_menu btn_menu_close"><i class="fas fa-times"></i></button></li>
                             <li><a href="#main">Home</a></li>
                             <li><a href="#about">About</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
                             <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
                             <li><a href="#experience">Experience</a></li>
                             <li><a href="#contact">Contact</a></li> 
                         </ul>
@@ -63,42 +64,13 @@
             <div class="about_skill">
                 <div class="container">
                     <div class="skill">
-                        <div class="skill_content">
-                            <div class="skill_title">
-                                <span>Skill</span>
-                                <span>93%</span>
-                            </div>
-                            <div class="skill_bar">
-                                <div class="skill_skill">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill_content">
-                            <div class="skill_title">
-                                <span>Studio</span>
-                                <span>78%</span>
-                            </div>
-                            <div class="skill_bar">
-                                <div class="skill_studio">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill_content">
-                            <div class="skill_title">
-                                <span>Experience</span>
-                                <span>89%</span>
-                            </div>
-                            <div class="skill_bar">
-                                <div class="skill_experience">
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="services" id="service">
+    <section class="services" id="services">
         <h2>OUR SERVICE</h2>
         <div class="container">
             <div class="services_inner">
@@ -164,31 +136,31 @@
         <div class="container">
             <div class="portfolio_tab">
                 <ul class="portfolio_tab_list">
-                    <li><button class="portfolio_tab_btn">All</button></li>
-                    <li><button class="portfolio_tab_btn">FASHION</button></li>
-                    <li><button class="portfolio_tab_btn">LIFESTYLE</button></li>
-                    <li><button class="portfolio_tab_btn">PORTFOLIO</button></li>
-                    <li><button class="portfolio_tab_btn">NATURE</button></li>
-                    <li><button class="portfolio_tab_btn">STUDIO</button></li>
+                    <li><button class="portfolio_tab_btn" data-tab-name="all">All</button></li>
+                    <li><button class="portfolio_tab_btn" data-tab-name="fashinon">FASHION</button></li>
+                    <li><button class="portfolio_tab_btn" data-tab-name="lifestyle">LIFESTYLE</button></li>
+                    <li><button class="portfolio_tab_btn" data-tab-name="portfolio">PORTFOLIO</button></li>
+                    <li><button class="portfolio_tab_btn" data-tab-name="nature">NATURE</button></li>
+                    <li><button class="portfolio_tab_btn" data-tab-name="studio">STUDIO</button></li>
                 </ul>
             </div>
             <div class="portfolio_img">
-                <div class="portfolio_img_item">
+                <div class="portfolio_img_item animate__animated" data-tab-img="lifestyle">
                     <img src="img/portfolio/boxed-water-is-better-km8IZ4xX9vA-unsplash 1.jpg" alt="boxed-water-is-better-km8IZ4xX9vA-unsplash 1.jpg">
                 </div>
-                <div class="portfolio_img_item">
+                <div class="portfolio_img_item animate__animated" data-tab-img="nature">
                     <img src="img/portfolio/brooke-cagle-ICFPv3xJY90-unsplash 1.jpg" alt="brooke-cagle-ICFPv3xJY90-unsplash 1.jpg">
                 </div>
-                <div class="portfolio_img_item">
+                <div class="portfolio_img_item animate__animated" data-tab-img="studio">
                     <img src="img/portfolio/jessica-felicio-p7YGWJWw6eA-unsplash 1.jpg" alt="jessica-felicio-p7YGWJWw6eA-unsplash 1.jpg">
                 </div>
-                <div class="portfolio_img_item">
+                <div class="portfolio_img_item animate__animated" data-tab-img="fashinon">
                     <img src="img/portfolio/john-vicente-OOh_QbwFmjU-unsplash 1.jpg" alt="john-vicente-OOh_QbwFmjU-unsplash 1.jpg">
                 </div>
-                <div class="portfolio_img_item">
+                <div class="portfolio_img_item animate__animated" data-tab-img="portfolio">
                     <img src="img/portfolio/kevin-hellhake-7BbHyuAf1sg-unsplash 1.jpg" alt="kevin-hellhake-7BbHyuAf1sg-unsplash 1.jpg">
                 </div>
-                <div class="portfolio_img_item">
+                <div class="portfolio_img_item animate__animated" data-tab-img="fashinon">
                     <img src="img/portfolio/zachariah-hagy-b1ocIFQe4hM-unsplash 1.jpg" alt="zachariah-hagy-b1ocIFQe4hM-unsplash 1.jpg">
                 </div>
                 
@@ -284,7 +256,7 @@
             </div>
         </div>
     </section>
-    <section class="experience">
+    <section class="experience" id="experience">
         <div class="container">
             <h2>Experience Team</h2>
             <div class="experience_inner">
@@ -323,12 +295,15 @@
         <div class="container">
             <div class="contact_form">
                 <h2>Contact</h2>
-                <form>
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="Email">
+                <form id="mail_send">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="email" placeholder="Email">
                     <textarea name="messange" id="messange"></textarea>
-                    <button class="contact_sent">SEND</button>
+                    <button type="submit" class="contact_sent">SEND</button>
                 </form>
+                <div class="warning">
+                    
+                </div>
             </div>
         </div>
     </section>
@@ -349,6 +324,8 @@
         </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/bootstrap-notify.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -48,11 +48,13 @@ img {
 	object-fit: cover;
 	object-position: center;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: 'Poppins', sans-serif;
 	background: #1A1A21;
-	scroll-behavior: smooth;
-	transition: 0.5s;
+	
 }
 
 .container{
@@ -72,6 +74,29 @@ header.active {
 	padding: 10px 0;
 	transition: 0.5s;
 }
+.warning {
+	position: relative;
+}
+.notify {
+	position: absolute;
+	top: 0;
+	left: 40%;
+	background: #FE215A;
+	padding: 15px 25px;
+	width: 25%;
+	border-radius: 5px;
+}
+.notify h4 {
+	font-size: 18px;
+	color: #fff;
+	letter-spacing: 3px;
+	margin: 5px 0;
+}
+.notify p {
+	color: #fff;
+	letter-spacing: 2px;
+}
+
 
 .header_inner {
 	display: flex;
@@ -124,6 +149,16 @@ header.active {
 .main {
 	background: url("../img/header.jpg") no-repeat center/cover;
 }
+.main::after {
+	content: "";
+	position: absolute;
+	left: 5%;
+	top: 0;
+	width: 55%;
+	height: 100%;
+	background: linear-gradient(309.76deg, rgba(193, 1, 10, 0.8) 35.17%, rgba(2, 111, 152, 0.51) 68.87%);
+	transform: skew(-12deg)
+}
 
 .btn_menu {
 	font-size: 22px;
@@ -137,6 +172,8 @@ header.active {
 }
 
 .main_titel{
+	position: relative;
+	z-index: 11;
 	display: flex;
 	flex-direction: column;
 	min-height: 90vh;
@@ -147,14 +184,12 @@ header.active {
 .main_titel span {
 	font-size: 36px;
 	font-weight: bold;
-	color: #181818;
 }
 
 .main_titel h1 {
 	font-size: 72px;
 	font-weight: bold;
 	margin-top: 12px;
-	color: #FE215A;
 }
 
 .main {
@@ -209,19 +244,17 @@ header.active {
 
 .skill_content .skill_title{
 	display: flex;
-	
-
+	flex-direction: column;
 }
 .skill_content .skill_title span{
 	color: #FE215A;
 	font-size: 24px;
-	margin: 20px 0;
+	margin: 10px 0;
 }
 .skill_content .skill_title span:nth-child(2){
-	text-align: center;
+
 	width: 100%;
 	display: block;
-	margin-left: 50px;
 }
 
 .skill_bar {
@@ -229,27 +262,11 @@ header.active {
 	height: 10px;
 	border-radius: 5px;
 }
-.skill_bar .skill_skill {
-	width: 0%;
+.skill_bar .skill_progres {
 	height: 100%;
 	background-color: #FE215A;
 	border-radius: 5px;
 	
-}
-
-
-.skill_bar .skill_studio {
-	width: 78%;
-	height: 100%;
-	background-color: #A957E5;
-	border-radius: 5px;
-}
-.skill_bar .skill_experience {
-	width: 89%;
-	height: 100%;
-	background-color: #74B75C;
-	border-radius: 5px;
-
 }
 .services {
 	margin-top: 50px;
@@ -332,6 +349,7 @@ header.active {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transition: color 0.3s ease-in-out;
+	outline: none;
 }
 .portfolio_tab .portfolio_tab_btn:hover{
 	color: #FE215A;
@@ -357,7 +375,6 @@ header.active {
 .services_pric_inner .services_pric_cart {
 	margin-top: 100px;
 	background: rgba(255, 255, 255, 0.18);
-	backdrop-filter: blur(6px);
 	padding: 50px 30px;
 	transition: 0.3s ease-in-out;
 }
@@ -419,11 +436,11 @@ header.active {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	margin: 120px 0;
-	flex: 0 0 30%;
+	margin: 70px 0;
+	flex: 0 0 25%;
 }
 .work_inner .work_cart .work_qty{
-	font-size: 42px;
+	font-size: 36px;
 	color: #fff;
 }
 .work_inner .work_cart .work_text {
@@ -498,9 +515,9 @@ header.active {
 	outline: none;
 	background: transparent;
 	border: 1px solid #FE215A;
+	color: #fff;
 }
 .contact_form form .contact_sent {
-	
 	padding: 10px 30px;
 	color: #FE215A;
 	letter-spacing: 0.50em;
@@ -625,6 +642,12 @@ footer {
 	}
 	.work_inner .work_cart {
 		margin: 20px 0;
+	}
+	.main {
+		min-height: 50vh;
+	}
+	.main_titel {
+		min-height: 50vh;
 	}
 	.main_titel h1 {
 		font-size: 42px;
